@@ -5,16 +5,19 @@ Xor sum of 1 to n is defined as 1 ^ 2 ^ 3 ^ … ^ n.
 
 ## Examples
 
+'''
 Input :  n = 4, k = 3  
 Output : 7  
 Explanation  
 Maximum possible xor sum is 1 ^ 2 ^ 4 = 7.  
+'''
 
-
+'''
 Input : n = 11, k = 1  
 Output : 11  
 Explanation  
 Maximum Possible xor sum is 11.  
+'''
 
 ## Reference
 
@@ -30,7 +33,7 @@ To make the number with all 1s, find a number which closest to and greater than 
 
 ## Code
 
-```
+```c
 #include <stdio.h>
 
 int maXOR(int n, int k) {
