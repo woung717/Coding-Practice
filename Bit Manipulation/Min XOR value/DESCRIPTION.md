@@ -2,6 +2,10 @@
 
 Given an array of N integers, find the pair of integers in the array which have minimum XOR value. Report the minimum XOR value.
 
+## Reference
+
+<https://www.interviewbit.com/problems/min-xor-value/>
+
 ## Examples
 
 ```
@@ -20,7 +24,7 @@ Output
 
 ## Constraints 
 
-2 <= N <= 100 000 
+2 <= N <= 100 000  
 0 <= A[i] <= 1 000 000 000
 
 ## Approaches
