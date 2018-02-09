@@ -5,19 +5,19 @@ Xor sum of 1 to n is defined as 1 ^ 2 ^ 3 ^ … ^ n.
 
 ## Examples
 
-'''
-Input :  n = 4, k = 3  
-Output : 7  
-Explanation  
-Maximum possible xor sum is 1 ^ 2 ^ 4 = 7.  
-'''
+```
+Input :  n = 4, k = 3
+Output : 7
+Explanation
+Maximum possible xor sum is 1 ^ 2 ^ 4 = 7.
+```
 
-'''
+```
 Input : n = 11, k = 1  
 Output : 11  
 Explanation  
 Maximum Possible xor sum is 11.  
-'''
+```
 
 ## Reference
 
@@ -37,23 +37,23 @@ To make the number with all 1s, find a number which closest to and greater than 
 #include <stdio.h>
 
 int maXOR(int n, int k) {
-	int i = 0;
+    int i = 0;
 
-	if(k == 1) return n;
+    if(k == 1) return n;
 
-	while(i <= n) i <<= 1;
+    while(i <= n) i <<= 1;
 
-	return i - 1; 
+    return i - 1; 
 }
 
 int main() {
-	int max;
+    int max;
 
-	if((max = maXOR(4, 3)) == 7)
-		printf("n = %d, k = %d, maxXOR = %d\n", 4, 3, max);
-	if((max = maXOR(11, 1)) == 11)
-		printf("n = %d, k = %d, maxXOR = %d\n", 11, 1, max);
+    if((max = maXOR(4, 3)) == 7)
+        printf("n = %d, k = %d, maxXOR = %d\n", 4, 3, max);
+    if((max = maXOR(11, 1)) == 11)
+        printf("n = %d, k = %d, maxXOR = %d\n", 11, 1, max);
 
-	return 0;
+    return 0;
 }
 ```
