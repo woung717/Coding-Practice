@@ -17,7 +17,7 @@ Output : 3
 
 ## Approaches
 
-Xor same number twice removes first number from the result. So, If we xor all  the number in array, only the number which couldn't be xored twice will be leave as result. 
+Xor twice with same number removes first number from the result. So, If we xor all  the number in array, only the number which couldn't be xored twice will be leave as result. 
 
 ## Code
 
@@ -25,22 +25,22 @@ Xor same number twice removes first number from the result. So, If we xor all  t
 #include <stdio.h>
 
 int findSingle(int arr[], int n) {
-	int ret = 0, i;
+    int ret = 0, i;
 
-	for(i = 0; i < n; i++) {
-		ret ^= arr[i];
-	}
+    for(i = 0; i < n; i++) {
+        ret ^= arr[i];
+    }
 
-	return ret;
+    return ret;
 }
 
 int main() {
-	int single;
-	int arr[5] = {1, 2, 2, 3, 1};
+    int single;
+    int arr[5] = {1, 2, 2, 3, 1};
 
-	if((single = findSingle(arr, 5)) == 3) 
-		printf("#1 case : single number = %d\n", single);
+    if((single = findSingle(arr, 5)) == 3) 
+        printf("#1 case : single number = %d\n", single);
 
-	return 0;
+    return 0;
 }
 ```
