@@ -21,7 +21,7 @@ Xor same number twice removes first number from the result. So, If we xor all  t
 
 ## Code
 
-```
+```c
 #include <stdio.h>
 
 int findSingle(int arr[], int n) {
