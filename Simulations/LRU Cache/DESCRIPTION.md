@@ -13,6 +13,10 @@ The first line of input contain an integer T denoting the no of test cases. Then
 **Output:**  
 For each test case in a new line output will be space separated values of the query.  
 
+## Reference
+
+<https://practice.geeksforgeeks.org/problems/lru-cache/1>
+
 ## Contraints
 
 ```  
