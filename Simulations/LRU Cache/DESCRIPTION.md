@@ -45,10 +45,14 @@ Output
 ## Approaches
 
 According to the mechanism of LRU Caching algorithm, update age counter on every accesses (set, get). When the cache is full, replace least recent value (lowest age) to input.
-If the key is exist, value and its age should be updated.
+If the key is exist, value and its age should be updated.  
+
+
+In real world case, if the number of query is more than capacity of integer variable, it may not work properly because of overflow. Instead of the counter, update using queue (FIFO) can be a solution.
 
 ## Code 
 
+### Using Time Counter
 ```cpp
 typedef struct CacheContent {
     int value;
@@ -111,4 +115,52 @@ int LRUCache::get(int x)
     return -1;
 }
 
+```
+
+### Using Queue 
+```cpp
+int cacheMax;
+
+list<int> recentMap;
+map<int, int> cache;
+
+LRUCache::LRUCache(int N)
+{
+    cacheMax = N;
+    
+    recentMap.clear();
+    cache.clear();
+}
+
+/*Sets the key x with value y in the LRU cache */
+void LRUCache::set(int x, int y) 
+{
+    if(cache.find(x) != cache.end()) {  // update case
+        recentMap.remove(x);    
+    } else {    // insert case
+        if(cache.size() >= cacheMax) {
+            cache.erase(recentMap.front());
+            recentMap.pop_front();
+        }
+    }
+
+    recentMap.push_back(x);
+    cache[x] = y;
+}
+
+/*Returns the value of the key x if 
+present else returns -1 */
+int LRUCache::get(int x)
+{
+    if(cache.find(x) != cache.end()) {  // exists
+        int ret = cache[x];
+
+        recentMap.remove(x);
+        recentMap.push_back(x);
+
+        return ret;
+    } 
+    
+    return -1;
+}
 ```
