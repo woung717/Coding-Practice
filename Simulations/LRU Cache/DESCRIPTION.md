@@ -48,7 +48,7 @@ According to the mechanism of LRU Caching algorithm, update age counter on every
 If the key is exist, value and its age should be updated.  
 
 
-In real world case, if the number of query is more than capacity of integer variable, it may not work properly because of overflow. Instead of the counter, update using queue (FIFO) can be a solution.
+In the real world cases, if the number of query is more than capacity of integer variable, it may not work properly because of overflow. Instead of the counter, update using queue (FIFO) can be a solution.
 
 ## Code 
 
