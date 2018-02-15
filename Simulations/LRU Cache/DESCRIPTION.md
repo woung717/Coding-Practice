@@ -105,11 +105,9 @@ present else returns -1 */
 int LRUCache::get(int x)
 {
     if(cache.find(x) != cache.end()) {  // exists
-        int ret = cache[x].value;
-        
         cache[x].age = ageCounter++;
         
-        return ret;
+        return cache[x].value;
     } 
     
     return -1;
@@ -153,12 +151,10 @@ present else returns -1 */
 int LRUCache::get(int x)
 {
     if(cache.find(x) != cache.end()) {  // exists
-        int ret = cache[x];
-
         recentMap.remove(x);
         recentMap.push_back(x);
 
-        return ret;
+        return cache[x];
     } 
     
     return -1;

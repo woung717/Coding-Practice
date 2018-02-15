@@ -49,12 +49,10 @@ present else returns -1 */
 int LRUCache::get(int x)
 {
     if(cache.find(x) != cache.end()) {  // exists
-        int ret = cache[x];
-
         recentMap.remove(x);
         recentMap.push_back(x);
 
-        return ret;
+        return cache[x];
     } 
     
     return -1;
