@@ -7,8 +7,8 @@ In the constructor of the class the size of the cache should be intitialized.
 
 **Input:**  
 The first line of input contain an integer T denoting the no of test cases. Then T test case follow. Each test case contains 3 lines. The first line of input contains an integer N denoting the capacity of the cache and then in the next line is an integer Q denoting the no of queries Then Q queries follow. A Query can be of two types.  
-&nbsp;&nbsp;**1. SET x y** : sets the value of the key x with value y  
-&nbsp;&nbsp;**2. GET x** : gets the key of x if present else returns -1.  
+1. **SET x y** : sets the value of the key x with value y.  
+2. **GET x** : gets the key of x if present else returns -1.  
 
 **Output:**  
 For each test case in a new line output will be space separated values of the query.  
